@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        img {
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fuck you <span id="display-name"></span>!</h1>
+    <img src="https://img.freepik.com/free-vector/realistic-hand-drawn-fuck-you-symbol_23-2148684365.jpg?w=740&t=st=1701218236~exp=1701218836~hmac=3bf98cda977338b665b7c24e13f1aa06e42a99bcd2a7ffc7861224715a5a80f6" alt="Fuck you">
+
+    <script>
+        // Get the name from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+
+        // Display the name on the page
+        const displayNameElement = document.getElementById('display-name');
+        displayNameElement.textContent = name;
+    </script>
+</body>
+</html>
